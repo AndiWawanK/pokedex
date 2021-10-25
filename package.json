@@ -20,7 +20,8 @@
     "react-native": "0.65.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.8.0",
-    "react-query": "^3.28.0"
+    "react-query": "^3.28.0",
+    "rn-placeholder": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

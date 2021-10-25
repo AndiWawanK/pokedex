@@ -4,7 +4,7 @@ const {width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    width: width / 2.2,
+    width: width / 2.18,
     height: width * 0.3,
     backgroundColor: Colors.WHITE,
     marginHorizontal: width * 0.01,
@@ -48,5 +48,9 @@ export default StyleSheet.create({
   image: {
     width: width * 0.17,
     height: width * 0.17,
+  },
+  mediaPlaceholder: {
+    flex: 1,
+    marginTop: width * 0.07,
   },
 });

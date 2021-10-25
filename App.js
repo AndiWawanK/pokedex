@@ -6,18 +6,17 @@
  * @flow strict-local
  */
 
- import React from 'react';
- import RootNavigator from 'navigation';
- import {SafeAreaView, StatusBar} from 'react-native';
- import {Colors} from 'styles';
- 
- const App = () => {
-   return (
-     <SafeAreaView style={{flex: 1}}>
-       <StatusBar barStyle={'dark-content'} />
-       <RootNavigator />
-     </SafeAreaView>
-   );
- };
- export default App;
- 
+import React from 'react';
+import RootNavigator from 'navigation';
+import {SafeAreaView, StatusBar} from 'react-native';
+import {Colors} from 'styles';
+
+const App = () => {
+  return (
+    <SafeAreaView style={{flex: 1, backgroundColor: Colors.WHITE}}>
+      <StatusBar barStyle={'dark-content'} />
+      <RootNavigator />
+    </SafeAreaView>
+  );
+};
+export default App;
