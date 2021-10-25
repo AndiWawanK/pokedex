@@ -1,14 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable prettier/prettier */
-import {useState, useEffect} from 'react';
-import { useQuery, QueryClient } from 'react-query';
+import {useState} from 'react';
+import { useQuery } from 'react-query';
 import axios from 'axios';
-const queryClient = new QueryClient();
 
 const useHome = () => {
   const [limit, setLimit] = useState(16);
+  const [pokemonData, setPokemonData] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState('');
   const [filter, setFilter] = useState({
-    data: [], // ['grass', 'fire', 'water', 'bug', 'normal', 'poison', 'electric', 'ground'],
+    data: [],
     selected: 'all',
   });
 
@@ -32,6 +34,7 @@ const useHome = () => {
       return filterKey.indexOf(item) === pos;
     });
     setFilter({...filter, data: filterData});
+    setPokemonData(results);
     if (types === 'all'){
       return results;
     } else {
@@ -39,11 +42,24 @@ const useHome = () => {
     }
   };
 
-
   const {isFetching, isPlaceholderData, error, isError, data} = useQuery(['pokemons', limit, filter.selected, {types: 'fire'}], () => fetchPokemon(limit, filter.selected),{
     placeholderData: [1,2,3,4,5,6,7,8,9,10], // fake data
     keepPreviousData: true,
   });
+
+  const handleSearchPokemon = keyword => {
+    setSearchKeyword(keyword);
+    if (keyword === ''){
+      setSearchResults([]);
+      return;
+    }
+    const newData = pokemonData.filter(item => {
+      const itemData = `${item.name.toUpperCase()}`;
+      const inputKeyword = keyword.toUpperCase();
+      return itemData.indexOf(inputKeyword) > -1;
+    });
+    setSearchResults(newData);
+  };
 
   return {
     isFetching,
@@ -55,6 +71,9 @@ const useHome = () => {
     setLimit,
     filter,
     setFilter,
+    handleSearchPokemon,
+    searchResults,
+    searchKeyword,
   };
 };
 

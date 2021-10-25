@@ -1,4 +1,5 @@
 import PokeCard from './PokeCard';
+import Icon from './Icon';
+import HeaderSearchBar from './HeaderSearchBar';
 
-export {PokeCard}
-
+export {PokeCard, Icon, HeaderSearchBar};

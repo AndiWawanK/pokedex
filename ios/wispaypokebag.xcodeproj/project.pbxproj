@@ -30,6 +30,22 @@
 		00E356EE1AD99517003FC87E /* wispaypokebagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wispaypokebagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* wispaypokebagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wispaypokebagTests.m; sourceTree = "<group>"; };
+		0131DF832727013C00D149F5 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		0131DF842727013C00D149F5 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		0131DF852727013D00D149F5 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		0131DF862727013D00D149F5 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		0131DF872727013D00D149F5 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		0131DF882727013D00D149F5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		0131DF892727013D00D149F5 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		0131DF8A2727013D00D149F5 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		0131DF8B2727013D00D149F5 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		0131DF8C2727013D00D149F5 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		0131DF8D2727013D00D149F5 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		0131DF8E2727013D00D149F5 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		0131DF8F2727013D00D149F5 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		0131DF902727013D00D149F5 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		0131DF912727013D00D149F5 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		0131DF922727013D00D149F5 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		01547331C4392F98195C1577 /* libPods-wispaypokebag-wispaypokebagTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wispaypokebag-wispaypokebagTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* wispaypokebag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wispaypokebag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = wispaypokebag/AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +99,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0131DF822727013C00D149F5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0131DF832727013C00D149F5 /* Fontisto.ttf */,
+				0131DF842727013C00D149F5 /* Octicons.ttf */,
+				0131DF852727013D00D149F5 /* Feather.ttf */,
+				0131DF862727013D00D149F5 /* Entypo.ttf */,
+				0131DF872727013D00D149F5 /* FontAwesome5_Brands.ttf */,
+				0131DF882727013D00D149F5 /* MaterialCommunityIcons.ttf */,
+				0131DF892727013D00D149F5 /* AntDesign.ttf */,
+				0131DF8A2727013D00D149F5 /* Foundation.ttf */,
+				0131DF8B2727013D00D149F5 /* Ionicons.ttf */,
+				0131DF8C2727013D00D149F5 /* FontAwesome5_Solid.ttf */,
+				0131DF8D2727013D00D149F5 /* FontAwesome5_Regular.ttf */,
+				0131DF8E2727013D00D149F5 /* FontAwesome.ttf */,
+				0131DF8F2727013D00D149F5 /* Zocial.ttf */,
+				0131DF902727013D00D149F5 /* EvilIcons.ttf */,
+				0131DF912727013D00D149F5 /* SimpleLineIcons.ttf */,
+				0131DF922727013D00D149F5 /* MaterialIcons.ttf */,
+			);
+			name = fonts;
+			path = ../android/app/src/main/assets/fonts;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* wispaypokebag */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +156,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0131DF822727013C00D149F5 /* fonts */,
 				13B07FAE1A68108700A75B9A /* wispaypokebag */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* wispaypokebagTests */,
@@ -145,7 +186,6 @@
 				6FA09743FD60B4660BA648BC /* Pods-wispaypokebag-wispaypokebagTests.debug.xcconfig */,
 				566C20B3F054F97BB5D84112 /* Pods-wispaypokebag-wispaypokebagTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

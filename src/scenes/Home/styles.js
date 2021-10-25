@@ -13,12 +13,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 25,
-    fontWeight: Platform.OS === 'ios' ? '500' : '500',
-    marginVertical: width * 0.05,
-    marginHorizontal: width * 0.04,
-  },
   listSection: {
     paddingHorizontal: width * 0.02,
   },

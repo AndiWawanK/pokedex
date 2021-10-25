@@ -6,7 +6,7 @@ import {
   ActivityIndicator,
   TouchableOpacity,
 } from 'react-native';
-import {PokeCard} from 'components';
+import {PokeCard, HeaderSearchBar} from 'components';
 import styles from './styles';
 import useHome from './useHome';
 import {Colors} from 'styles';
@@ -22,6 +22,9 @@ const Home = ({navigation}) => {
     setLimit,
     filter,
     setFilter,
+    searchResults,
+    handleSearchPokemon,
+    searchKeyword,
   } = useHome();
   if (isError) {
     return (
@@ -32,7 +35,11 @@ const Home = ({navigation}) => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Pokedex</Text>
+      <HeaderSearchBar
+        onSearch={keyword => handleSearchPokemon(keyword)}
+        keyword={searchKeyword}
+        data={searchResults}
+      />
       <View>
         <FlatList
           data={filter.data}
