@@ -51,7 +51,7 @@ const Detail = ({route, navigation}) => {
           )}
         />
       </View>
-      <Animated.View style={[styles.catchButton, rotateYAnimatedStyle]}>
+      <Animated.View style={[styles.catchButtonSection, rotateYAnimatedStyle]}>
         <TouchableOpacity
           style={styles.catchButton}
           onPress={() => handleCatchPokemon()}>

@@ -24,6 +24,7 @@ const useDetail = paramData => {
       prevData.push(paramData);
       await AsyncStorage.setItem('pokebags', JSON.stringify(prevData));
       setModalCatch(false);
+      alert('Your Pokemon is saved!');
     } else {
       await AsyncStorage.setItem('pokebags', JSON.stringify([paramData]));
       setModalCatch(false);

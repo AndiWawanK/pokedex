@@ -8,6 +8,7 @@ import {
   Dimensions,
   Image,
   FlatList,
+  Platform,
 } from 'react-native';
 import Animated, {Easing} from 'react-native-reanimated';
 import {Icon} from 'components';
@@ -110,10 +111,21 @@ const HeaderSearchBar = props => {
         <View style={styles.headerSection}>
           <Text style={styles.title}>Pokedex</Text>
           <TouchableOpacity
-            style={styles.btnSearch}
-            onPress={() => handleFocused()}>
-            <Icon name="search" type="Feather" style={styles.btnSearchIcon} />
+            style={[styles.btnSearch]}
+            onPress={() => props.navigation.navigate('Bags')}>
+            <Icon
+              name="bag-personal-outline"
+              type="MaterialCommunityIcons"
+              style={styles.btnSearchIcon}
+            />
           </TouchableOpacity>
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity
+              style={[styles.btnSearch, {marginLeft: 10}]}
+              onPress={() => handleFocused()}>
+              <Icon name="search" type="Feather" style={styles.btnSearchIcon} />
+            </TouchableOpacity>
+          )}
           <Animated.View
             style={[
               styles.searchBox,
@@ -153,7 +165,11 @@ const HeaderSearchBar = props => {
             data={props.data}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({item, index}) => (
-              <TouchableOpacity style={styles.pokemonItem}>
+              <TouchableOpacity
+                style={styles.pokemonItem}
+                onPress={() =>
+                  props.navigation.navigate('Detail', {data: item})
+                }>
                 <Image
                   source={{
                     uri: item.image,

@@ -39,6 +39,7 @@ const Home = ({navigation}) => {
         onSearch={keyword => handleSearchPokemon(keyword)}
         keyword={searchKeyword}
         data={searchResults}
+        navigation={navigation}
       />
       <View>
         <FlatList

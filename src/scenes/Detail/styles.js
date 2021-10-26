@@ -53,14 +53,19 @@ export default StyleSheet.create({
     fontSize: 13,
     color: Colors.WHITE,
   },
-
-  catchButton: {
+  catchButtonSection: {
     position: 'absolute',
     bottom: width * 0.05,
-    backgroundColor: Colors.WHITE,
-    borderRadius: 75,
+    width: width * 0.16,
+    height: width * 0.16,
+    backgroundColor: 'red',
     alignSelf: 'center',
+    borderRadius: 75,
+  },
+  catchButton: {
+    backgroundColor: Colors.WHITE,
     shadowColor: '#000',
+    borderRadius: 75,
     shadowOffset: {
       width: 0,
       height: 2,

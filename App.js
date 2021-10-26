@@ -14,7 +14,7 @@ import {Colors} from 'styles';
 const App = () => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: Colors.WHITE}}>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={Colors.WHITE} />
       <RootNavigator />
     </SafeAreaView>
   );

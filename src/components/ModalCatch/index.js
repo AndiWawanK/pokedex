@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import {Icon} from 'components';
 import styles from './styles';
@@ -16,7 +17,9 @@ const ModalCatch = props => (
       <TouchableOpacity style={styles.btnClose} onPress={props.onClose}>
         <Icon name="close" type="AntDesign" style={styles.btnCloseIcon} />
       </TouchableOpacity>
-      <KeyboardAvoidingView behavior="padding" enabled>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : null}
+        enabled>
         <View style={styles.modalView}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>Gotcha!</Text>

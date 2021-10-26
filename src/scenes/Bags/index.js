@@ -19,7 +19,9 @@ const Bags = ({navigation}) => {
         extraData={extraPokemons}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item, index}) => (
-          <View style={styles.listSection}>
+          <TouchableOpacity
+            style={styles.listSection}
+            onPress={() => navigation.navigate('Detail', {data: item})}>
             <Image
               source={{
                 uri: item.image,
@@ -39,7 +41,7 @@ const Bags = ({navigation}) => {
                 style={styles.btnDeleteIcon}
               />
             </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>

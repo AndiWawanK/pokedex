@@ -10,22 +10,22 @@ const useAnimation = () => {
     flipAnimation();
   }, []);
 
-  // useEffect(() => {
-  //   Animated.loop(
-  //     Animated.sequence([
-  //       Animated.timing(animatedImage.current, {
-  //         toValue: 1.5,
-  //         duration: 2000,
-  //         useNativeDriver: true,
-  //       }),
-  //       Animated.timing(animatedImage.current, {
-  //         toValue: 1,
-  //         duration: 2000,
-  //         useNativeDriver: true,
-  //       }),
-  //     ]),
-  //   ).start();
-  // }, []);
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(animatedImage.current, {
+          toValue: 1.5,
+          duration: 2000,
+          useNativeDriver: true,
+        }),
+        Animated.timing(animatedImage.current, {
+          toValue: 1,
+          duration: 2000,
+          useNativeDriver: true,
+        }),
+      ]),
+    ).start();
+  }, []);
 
   animatedBall.addListener(({value}) => {
     currentValue = value;
