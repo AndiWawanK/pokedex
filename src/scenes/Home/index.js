@@ -66,7 +66,11 @@ const Home = ({navigation}) => {
           keyExtractor={(item, index) => index.toString()}
           numColumns={2}
           renderItem={({item, index}) => (
-            <PokeCard data={item} loading={isPlaceholderData} />
+            <PokeCard
+              data={item}
+              loading={isPlaceholderData}
+              onPress={() => navigation.navigate('Detail', {data: item})}
+            />
           )}
           onEndReached={() => (data.length > 15 ? setLimit(limit + 4) : null)}
           ListFooterComponent={

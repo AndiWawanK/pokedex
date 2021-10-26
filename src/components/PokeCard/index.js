@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import {
   Placeholder,
@@ -8,9 +8,12 @@ import {
   Fade,
 } from 'rn-placeholder';
 const PokeCard = props => {
-  const {name, types, image} = props.data;
+  const {name, weight, image} = props.data;
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      onPress={props.onPress}
+      disabled={props.loading}
+      style={styles.container}>
       <View style={styles.headerSection}>
         {props.loading ? (
           <Placeholder Animation={Fade} style={{flex: 1}}>
@@ -25,7 +28,7 @@ const PokeCard = props => {
           </Placeholder>
         ) : (
           <View style={styles.typeWrap}>
-            <Text style={styles.typeName}>{types}</Text>
+            <Text style={styles.typeName}>{'w:' + weight}</Text>
           </View>
         )}
       </View>
@@ -45,7 +48,7 @@ const PokeCard = props => {
           />
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -21,24 +21,33 @@ const useHome = () => {
     const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${nextPage}`);
     for (const item of data.results){
       const detail = await axios.get(`https://pokeapi.co/api/v2/pokemon/${item.name}`);
-      item.types = detail.data.types[0].type.name;
+      // item.types = detail.data.types[0].type.name;
+      const pokeTypes = [];
+      detail.data.types.forEach((pokeType) => {
+        pokeTypes.push(pokeType.type.name);
+      });
+      // item.types = detail.data.types;
+      item.types = pokeTypes;
+      item.weight = detail.data.weight;
+      item.moves = detail.data.moves;
       item.image = Object.values(detail.data.sprites.other)[1].front_default;
 
       // ambil data types dari api
       filterKey.push(detail.data.types[0].type.name);
       results.push(item);
     }
+    // simpan data pokemon untuk local search
+    setPokemonData(results);
 
     // hapus data duplicate dari array filterKey
     const filterData = filterKey.filter(function(item, pos) {
       return filterKey.indexOf(item) === pos;
     });
     setFilter({...filter, data: filterData});
-    setPokemonData(results);
     if (types === 'all'){
       return results;
     } else {
-      return results.filter(val => val.types === types);
+      return results.filter(val => val.types.includes(types));
     }
   };
 

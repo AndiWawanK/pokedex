@@ -132,7 +132,6 @@ const HeaderSearchBar = props => {
             </Animated.View>
             <TextInput
               ref={inputRef}
-              autoFocus={true}
               placeholder="Type pokemon name . . ."
               clearButtonMode="always"
               onChangeText={props.onSearch}
